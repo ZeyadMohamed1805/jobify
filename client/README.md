@@ -4,7 +4,7 @@
 
 #### Create React APP
 
-[VITE](https://vitejs.dev/guide/)
+[VITE](https://vitets.dev/guide/)
 
 ```sh
 npm create vite@latest projectName -- --template react
@@ -21,16 +21,16 @@ npm run dev
 ```
 
 - APP running on http://localhost:5173/
-- .jsx extension
+- .tsx extension
 
 #### Remove Boilerplate
 
 - remove App.css
 - remove all code in index.css
 
-  App.jsx
+  App.tsx
 
-```jsx
+```tsx
 const App = () => {
   return <h1>Jobify App</h1>;
 };
@@ -78,7 +78,7 @@ export default App;
 - won't need to stop/start server
 
 ```sh
-npm install @tanstack/react-query@4.29.5 @tanstack/react-query-devtools@4.29.6 axios@1.3.6 dayjs@1.11.7 react-icons@4.8.0 react-router-dom@6.10.0 react-toastify@9.1.2 recharts@2.5.0 styled-components@5.3.10
+npm install @tanstack/react-query@4.29.5 @tanstack/react-query-devtools@4.29.6 axios@1.3.6 dayts@1.11.7 react-icons@4.8.0 react-router-dom@6.10.0 react-toastify@9.1.2 recharts@2.5.0 styled-components@5.3.10
 
 ```
 
@@ -99,9 +99,9 @@ npm install @tanstack/react-query@4.29.5 @tanstack/react-query-devtools@4.29.6 a
 npm i react-router-dom@6.10.0
 ```
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -128,23 +128,23 @@ export default App;
 #### Create Pages
 
 - create src/pages directory
-- setup index.js and following pages :
+- setup index.ts and following pages :
 
-  AddJob.jsx
-  Admin.jsx
-  AllJobs.jsx
-  DashboardLayout.jsx
-  DeleteJob.jsx
-  EditJob.jsx
-  Error.jsx
-  HomeLayout.jsx
-  Landing.jsx
-  Login.jsx
-  Profile.jsx
-  Register.jsx
-  Stats.jsx
+  AddJob.tsx
+  Admin.tsx
+  AllJobs.tsx
+  DashboardLayout.tsx
+  DeleteJob.tsx
+  EditJob.tsx
+  Error.tsx
+  HomeLayout.tsx
+  Landing.tsx
+  Login.tsx
+  Profile.tsx
+  Register.tsx
+  Stats.tsx
 
-```jsx
+```tsx
 const AddJob = () => {
   return <h1>AddJob</h1>;
 };
@@ -153,15 +153,15 @@ export default AddJob;
 
 #### Index
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 import HomeLayout from '../ pages/HomeLayout';
 ```
 
-pages/index.js
+pages/index.ts
 
-```js
+```ts
 export { default as DashboardLayout } from './DashboardLayout';
 export { default as Landing } from './Landing';
 export { default as HomeLayout } from './HomeLayout';
@@ -176,9 +176,9 @@ export { default as Profile } from './Profile';
 export { default as Admin } from './Admin';
 ```
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 import {
   HomeLayout,
   Landing,
@@ -213,9 +213,9 @@ const router = createBrowserRouter([
 - navigate around project
 - client side routing
 
-Register.jsx
+Register.tsx
 
-```jsx
+```tsx
 import { Link } from 'react-router-dom';
 
 const Register = () => {
@@ -229,9 +229,9 @@ const Register = () => {
 export default Register;
 ```
 
-Login.jsx
+Login.tsx
 
-```jsx
+```tsx
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -252,9 +252,9 @@ export default Login;
 - make path relative
 - for time being only home layout will be visible
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 const router = createBrowserRouter([
   {
     path: '/',
@@ -277,9 +277,9 @@ const router = createBrowserRouter([
 ]);
 ```
 
-HomeLayout.jsx
+HomeLayout.tsx
 
-```jsx
+```tsx
 import { Outlet } from 'react-router-dom';
 
 const HomeLayout = () => {
@@ -296,9 +296,9 @@ export default HomeLayout;
 
 #### Index (Home) Page
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 {
     path: '/',
     element: <HomeLayout />,
@@ -316,9 +316,9 @@ App.jsx
 
 - bubbles up
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 {
     path: '/',
     element: <HomeLayout />,
@@ -327,9 +327,9 @@ App.jsx
 }
 ```
 
-Error.jsx
+Error.tsx
 
-```jsx
+```tsx
 import { Link, useRouteError } from 'react-router-dom';
 
 const Error = () => {
@@ -347,7 +347,7 @@ export default Error;
 
 #### Styled Components
 
-- CSS in JS
+- CSS in ts
 - Styled Components
 - have logic and styles in component
 - no name collisions
@@ -359,7 +359,7 @@ export default Error;
 npm install styled-components@5.3.10
 ```
 
-```js
+```ts
 import styled from 'styled-components';
 
 const El = styled.el`
@@ -371,9 +371,9 @@ const El = styled.el`
 - vscode-styled-components extension
 - colors and bugs
 
-Landing.jsx
+Landing.tsx
 
-```jsx
+```tsx
 import styled from 'styled-components';
 
 const Landing = () => {
@@ -394,7 +394,7 @@ export default Landing;
 
 #### Style Entire React Component
 
-```js
+```ts
 const Wrapper = styled.el``;
 
 const Component = () => {
@@ -409,9 +409,9 @@ const Component = () => {
 - only responsible for styling
 - wrappers folder in assets
 
-Landing.jsx
+Landing.tsx
 
-```jsx
+```tsx
 import styled from 'styled-components';
 
 const Landing = () => {
@@ -438,7 +438,7 @@ export default Landing;
 
 #### Landing Page
 
-```jsx
+```tsx
 import main from '../assets/images/main.svg';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
@@ -529,22 +529,22 @@ export default Landing;
 
 - css optional
 
-  Landing.jsx
+  Landing.tsx
 
-```jsx
+```tsx
 import Wrapper from '../assets/wrappers/LandingPage';
 ```
 
 #### Logo Component
 
-- create src/components/Logo.jsx
+- create src/components/Logo.tsx
 - import logo and setup component
-- in components setup index.js import/export (just like pages)
+- in components setup index.ts import/export (just like pages)
 - replace in Landing
 
-  Logo.jsx
+  Logo.tsx
 
-```jsx
+```tsx
 import logo from '../assets/images/logo.svg';
 
 const Logo = () => {
@@ -561,9 +561,9 @@ export default Logo;
 
 #### Error Page
 
-Error.jsx
+Error.tsx
 
-```jsx
+```tsx
 import { Link, useRouteError } from 'react-router-dom';
 import img from '../assets/images/not-found.svg';
 import Wrapper from '../assets/wrappers/ErrorPage';
@@ -597,9 +597,9 @@ export default Error;
 
 #### Error Page CSS (optional)
 
-assets/wrappers/Error.js
+assets/wrappers/Error.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.main`
@@ -635,9 +635,9 @@ export default Wrapper;
 
 #### Register Page
 
-Register.jsx
+Register.tsx
 
-```jsx
+```tsx
 import { Logo } from '../components';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 import { Link } from 'react-router-dom';
@@ -688,11 +688,11 @@ In React, the defaultValue prop is used to set the initial or default value of a
 
 #### FormRow Component
 
-- create components/FormRow.jsx (export/import)
+- create components/FormRow.tsx (export/import)
 
-FormRow.jsx
+FormRow.tsx
 
-```jsx
+```tsx
 const FormRow = ({ type, name, labelText, defaultValue = '' }) => {
   return (
     <div className='form-row'>
@@ -714,9 +714,9 @@ const FormRow = ({ type, name, labelText, defaultValue = '' }) => {
 export default FormRow;
 ```
 
-Register.jsx
+Register.tsx
 
-```jsx
+```tsx
 import { Logo, FormRow } from '../components';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 import { Link } from 'react-router-dom';
@@ -754,7 +754,7 @@ export default Register;
 
 Login Page
 
-```jsx
+```tsx
 import { Logo, FormRow } from '../components';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 
@@ -789,9 +789,9 @@ export default Login;
 
 #### Register and Login CSS (optional)
 
-assets/wrappers/RegisterAndLoginPage.js
+assets/wrappers/RegisterAndLoginPage.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -831,9 +831,9 @@ export default Wrapper;
 
 #### Dashboard Pages
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
  {
         path: 'dashboard',
         element: <DashboardLayout />,
@@ -860,9 +860,9 @@ App.jsx
       },
 ```
 
-Dashboard.jsx
+Dashboard.tsx
 
-```jsx
+```tsx
 import { Outlet } from 'react-router-dom';
 
 const DashboardLayout = () => {
@@ -878,13 +878,13 @@ export default DashboardLayout;
 #### Navbar, BigSidebar and SmallSidebar
 
 - in components create :
-  Navbar.jsx
-  BigSidebar.jsx
-  SmallSidebar.jsx
+  Navbar.tsx
+  BigSidebar.tsx
+  SmallSidebar.tsx
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```jsx
+```tsx
 import { Outlet } from 'react-router-dom';
 
 import Wrapper from '../assets/wrappers/Dashboard';
@@ -912,9 +912,9 @@ export default Dashboard;
 
 #### Dashboard Layout - CSS (optional)
 
-assets/wrappers/DashboardLayout.jsx
+assets/wrappers/DashboardLayout.tsx
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -941,7 +941,7 @@ export default Wrapper;
 
 #### Dashboard Context
 
-```jsx
+```tsx
 import { Outlet } from 'react-router-dom';
 
 import Wrapper from '../assets/wrappers/Dashboard';
@@ -1007,9 +1007,9 @@ export default Dashboard;
 npm install react-icons@4.8.0
 ```
 
-Navbar.jsx
+Navbar.tsx
 
-```jsx
+```tsx
 
 import {FaHome} from 'react-icons/fa'
 const Navbar = () => {
@@ -1025,7 +1025,7 @@ const Navbar = () => {
 
 #### Navbar - Initial Setup
 
-```jsx
+```tsx
 import Wrapper from '../assets/wrappers/Navbar';
 import { FaAlignLeft } from 'react-icons/fa';
 import Logo from './Logo';
@@ -1054,9 +1054,9 @@ export default Navbar;
 
 #### Navbar CSS (optional)
 
-assets/wrappers/Navbar.js
+assets/wrappers/Navbar.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.nav`
@@ -1114,9 +1114,9 @@ export default Wrapper;
 
 #### Links
 
-- create src/utils/links.jsx
+- create src/utils/links.tsx
 
-```jsx
+```tsx
 import React from 'react';
 
 import { IoBarChartSharp } from 'react-icons/io5';
@@ -1142,7 +1142,7 @@ export default links;
 
 SmallSidebar
 
-```jsx
+```tsx
 import Wrapper from '../assets/wrappers/SmallSidebar';
 import { FaTimes } from 'react-icons/fa';
 
@@ -1199,9 +1199,9 @@ export default SmallSidebar;
 
 #### Small Sidebar CSS (optional)
 
-assets/wrappers/SmallSidebar.js
+assets/wrappers/SmallSidebar.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.aside`
@@ -1278,9 +1278,9 @@ export default Wrapper;
 
 #### NavLinks
 
-- components/NavLinks.jsx
+- components/NavLinks.tsx
 
-```jsx
+```tsx
 import { useDashboardContext } from '../pages/DashboardLayout';
 import links from '../utils/links';
 import { NavLink } from 'react-router-dom';
@@ -1315,7 +1315,7 @@ export default NavLinks;
 
 #### Big Sidebar
 
-```jsx
+```tsx
 import NavLinks from './NavLinks';
 import Logo from '../components/Logo';
 import Wrapper from '../assets/wrappers/BigSidebar';
@@ -1344,7 +1344,7 @@ const BigSidebar = () => {
 export default BigSidebar;
 ```
 
-```jsx
+```tsx
 const NavLinks = ({ isBigSidebar }) => {
   const { user, toggleSidebar } = useDashboardContext();
 
@@ -1375,9 +1375,9 @@ export default NavLinks;
 
 #### BigSidebar CSS (optional)
 
-assets/wrappers/BigSidebar.js
+assets/wrappers/BigSidebar.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.aside`
@@ -1442,9 +1442,9 @@ export default Wrapper;
 
 #### LogoutContainer
 
-components/LogoutContainer.jsx
+components/LogoutContainer.tsx
 
-```jsx
+```tsx
 import { FaUserCircle, FaCaretDown } from 'react-icons/fa';
 import Wrapper from '../assets/wrappers/LogoutContainer';
 import { useState } from 'react';
@@ -1483,9 +1483,9 @@ export default LogoutContainer;
 
 #### LogoutContainer CSS (optional)
 
-assets/wrappers/LogoutContainer.js
+assets/wrappers/LogoutContainer.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -1535,9 +1535,9 @@ export default Wrapper;
 
 #### ThemeToggle
 
-components/ThemeToggle.jsx
+components/ThemeToggle.tsx
 
-```jsx
+```tsx
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import Wrapper from '../assets/wrappers/ThemeToggle';
 import { useDashboardContext } from '../pages/DashboardLayout';
@@ -1558,9 +1558,9 @@ const ThemeToggle = () => {
 export default ThemeToggle;
 ```
 
-Navbar.jsx
+Navbar.tsx
 
-```jsx
+```tsx
 <div className='btn-container'>
   <ThemeToggle />
 </div>
@@ -1568,9 +1568,9 @@ Navbar.jsx
 
 #### ThemeToggle CSS (optional)
 
-assets/wrappers/ThemeToggle.js
+assets/wrappers/ThemeToggle.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -1592,9 +1592,9 @@ export default Wrapper;
 
 #### Dark Theme - Logic
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```jsx
+```tsx
 const toggleDarkTheme = () => {
   const newDarkTheme = !isDarkTheme;
   setIsDarkTheme(newDarkTheme);
@@ -1605,9 +1605,9 @@ const toggleDarkTheme = () => {
 
 #### Access Theme
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 const checkDefaultTheme = () => {
   const isDarkTheme =
     localStorage.getItem('darkTheme') === 'true'
@@ -1623,9 +1623,9 @@ element: <DashboardLayout isDarkThemeEnabled={isDarkThemeEnabled} />,
 }
 ```
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```jsx
+```tsx
 const Dashboard = ({ isDarkThemeEnabled }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(isDarkThemeEnabled);
 };
@@ -1693,13 +1693,13 @@ rd /s /q .git
 
 #### Setup Server
 
-- create package.json
+- create package.tson
 
 ```sh
 npm init -y
 ```
 
-- create and test server.js
+- create and test server.ts
 
 ```sh
 node server
@@ -1707,28 +1707,28 @@ node server
 
 #### ES6 Modules
 
-package.json
+package.tson
 
-```json
+```tson
   "type": "module",
 ```
 
-Create test.js and implement named import
+Create test.ts and implement named import
 
-test.js
+test.ts
 
-```js
+```ts
 export const value = 42;
 ```
 
-server.js
+server.ts
 
-```js
-import { value } from './test.js';
+```ts
+import { value } from './test.ts';
 console.log(value);
 ```
 
-- don't forget about .js extension
+- don't forget about .ts extension
 - for named imports, names must match
 
 #### Source Control
@@ -1740,13 +1740,13 @@ console.log(value);
 #### Install Packages and Setup Install Script
 
 ```sh
-npm install bcryptjs@2.4.3 concurrently@8.0.1 cookie-parser@1.4.6 dayjs@1.11.7 dotenv@16.0.3 express@4.18.2 express-async-errors@3.1.1 express-validator@7.0.1 http-status-codes@2.2.0 jsonwebtoken@9.0.0 mongoose@7.0.5 morgan@1.10.0 multer@1.4.5-lts.1 nanoid@4.0.2 nodemon@2.0.22 cloudinary@1.37.3 dayjs@1.11.9 datauri@4.1.0 helmet@7.0.0 express-rate-limit@6.8.0 express-mongo-sanitize@2.2.0
+npm install bcryptts@2.4.3 concurrently@8.0.1 cookie-parser@1.4.6 dayts@1.11.7 dotenv@16.0.3 express@4.18.2 express-async-errors@3.1.1 express-validator@7.0.1 http-status-codes@2.2.0 tsonwebtoken@9.0.0 mongoose@7.0.5 morgan@1.10.0 multer@1.4.5-lts.1 nanoid@4.0.2 nodemon@2.0.22 cloudinary@1.37.3 dayts@1.11.9 datauri@4.1.0 helmet@7.0.0 express-rate-limit@6.8.0 express-mongo-sanitize@2.2.0
 
 ```
 
-package.json
+package.tson
 
-```json
+```tson
 "scripts": {
     "setup-project": "npm i && cd client && npm i"
   },
@@ -1765,21 +1765,21 @@ npm run setup-project
 - create a basic home route which sends back "hello world"
 - setup a script with nodemon package.
 
-[Express Docs](https://expressjs.com/)
+[Express Docs](https://expressts.com/)
 
-Express is a fast and minimalist web application framework for Node.js. It simplifies the process of building web applications by providing a robust set of features for handling HTTP requests, routing, middleware, and more. Express allows you to create server-side applications and APIs easily, with a focus on simplicity and flexibility.
+Express is a fast and minimalist web application framework for Node.ts. It simplifies the process of building web applications by providing a robust set of features for handling HTTP requests, routing, middleware, and more. Express allows you to create server-side applications and APIs easily, with a focus on simplicity and flexibility.
 
 [Nodemon Docs](https://nodemon.io/)
 
-Nodemon is a development tool that improves the developer experience. It monitors your Node.js application for any changes in the code and automatically restarts the server whenever a change is detected. This eliminates the need to manually restart the server after every code modification, making the development process more efficient and productive. Nodemon is commonly used during development to save time and avoid the hassle of manual server restarts.
+Nodemon is a development tool that improves the developer experience. It monitors your Node.ts application for any changes in the code and automatically restarts the server whenever a change is detected. This eliminates the need to manually restart the server after every code modification, making the development process more efficient and productive. Nodemon is commonly used during development to save time and avoid the hassle of manual server restarts.
 
 ```sh
 npm i express@4.18.2 nodemon@2.0.22
 ```
 
-server.js
+server.ts
 
-```js
+```ts
 import express from 'express';
 const app = express();
 
@@ -1792,45 +1792,45 @@ app.listen(5100, () => {
 });
 ```
 
-package.json
+package.tson
 
-```json
+```tson
 "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.ts"
   },
 ```
 
 #### Thunder Client
 
-Thunder Client is a popular Visual Studio Code extension that facilitates API testing and debugging. It provides a user-friendly interface for making HTTP requests and viewing the responses, allowing developers to easily test APIs, examine headers, and inspect JSON/XML payloads. Thunder Client offers features such as environment variables, request history, and the ability to save and organize requests for efficient development workflows.
+Thunder Client is a popular Visual Studio Code extension that facilitates API testing and debugging. It provides a user-friendly interface for making HTTP requests and viewing the responses, allowing developers to easily test APIs, examine headers, and inspect tsON/XML payloads. Thunder Client offers features such as environment variables, request history, and the ability to save and organize requests for efficient development workflows.
 
 [Thunder Client](https://www.thunderclient.com/)
 
 - install and test home route
 
-#### Accept JSON
+#### Accept tsON
 
-Setup express middleware to accept json
+Setup express middleware to accept tson
 
 server
 
-```js
-app.use(express.json());
+```ts
+app.use(express.tson());
 
 app.post('/', (req, res) => {
   console.log(req);
 
-  res.json({ message: 'Data received', data: req.body });
+  res.tson({ message: 'Data received', data: req.body });
 });
 ```
 
 #### Morgan and Dotenv
 
-[Morgan](https://www.npmjs.com/package/morgan)
+[Morgan](https://www.npmts.com/package/morgan)
 
-HTTP request logger middleware for node.js
+HTTP request logger middleware for node.ts
 
-[Dotenv](https://www.npmjs.com/package/dotenv)
+[Dotenv](https://www.npmts.com/package/dotenv)
 
 Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
 
@@ -1838,7 +1838,7 @@ Dotenv is a zero-dependency module that loads environment variables from a .env 
 npm i morgan@1.10.0 dotenv@16.0.3
 ```
 
-```js
+```ts
 import morgan from 'morgan';
 
 app.use(morgan('dev'));
@@ -1848,9 +1848,9 @@ app.use(morgan('dev'));
 - add PORT and NODE_ENV
 - add .env to .gitignore
 
-server.js
+server.ts
 
-```js
+```ts
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -1870,23 +1870,23 @@ app.listen(port, () => {
 - global await (top-level await)
 - watch mode
 
-```js
+```ts
 try {
   const response = await fetch(
     'https://www.course-api.com/react-useReducer-cart-project'
   );
-  const cartData = await response.json();
+  const cartData = await response.tson();
   console.log(cartData);
 } catch (error) {
   console.log(error);
 }
 ```
 
-package.json
+package.tson
 
-```json
+```tson
  "scripts": {
-    "watch": "node --watch server.js "
+    "watch": "node --watch server.ts "
   },
 ```
 
@@ -1898,7 +1898,7 @@ package.json
 
 #### Get All Jobs
 
-[Nanoid](https://www.npmjs.com/package/nanoid)
+[Nanoid](https://www.npmts.com/package/nanoid)
 
 The nanoid package is a software library used for generating unique and compact identifiers in web applications or databases. It creates short and URL-safe IDs by combining random characters from a set of 64 characters. Nanoid is a popular choice due to its simplicity, efficiency, and collision-resistant nature.
 
@@ -1906,9 +1906,9 @@ The nanoid package is a software library used for generating unique and compact 
 npm i nanoid@4.0.2
 ```
 
-server.js
+server.ts
 
-```js
+```ts
 import { nanoid } from 'nanoid';
 
 let jobs = [
@@ -1917,25 +1917,25 @@ let jobs = [
 ];
 
 app.get('/api/v1/jobs', (req, res) => {
-  res.status(200).json({ jobs });
+  res.status(200).tson({ jobs });
 });
 ```
 
 #### Create, FindOne, Modify and Delete
 
-```js
+```ts
 // CREATE JOB
 
 app.post('/api/v1/jobs', (req, res) => {
   const { company, position } = req.body;
   if (!company || !position) {
-    return res.status(400).json({ msg: 'please provide company and position' });
+    return res.status(400).tson({ msg: 'please provide company and position' });
   }
   const id = nanoid(10);
   // console.log(id);
   const job = { id, company, position };
   jobs.push(job);
-  res.status(200).json({ job });
+  res.status(200).tson({ job });
 });
 
 // GET SINGLE JOB
@@ -1944,9 +1944,9 @@ app.get('/api/v1/jobs/:id', (req, res) => {
   const { id } = req.params;
   const job = jobs.find((job) => job.id === id);
   if (!job) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
-  res.status(200).json({ job });
+  res.status(200).tson({ job });
 });
 
 // EDIT JOB
@@ -1954,17 +1954,17 @@ app.get('/api/v1/jobs/:id', (req, res) => {
 app.patch('/api/v1/jobs/:id', (req, res) => {
   const { company, position } = req.body;
   if (!company || !position) {
-    return res.status(400).json({ msg: 'please provide company and position' });
+    return res.status(400).tson({ msg: 'please provide company and position' });
   }
   const { id } = req.params;
   const job = jobs.find((job) => job.id === id);
   if (!job) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
 
   job.company = company;
   job.position = position;
-  res.status(200).json({ msg: 'job modified', job });
+  res.status(200).tson({ msg: 'job modified', job });
 });
 
 // DELETE JOB
@@ -1973,47 +1973,47 @@ app.delete('/api/v1/jobs/:id', (req, res) => {
   const { id } = req.params;
   const job = jobs.find((job) => job.id === id);
   if (!job) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
   const newJobs = jobs.filter((job) => job.id !== id);
   jobs = newJobs;
 
-  res.status(200).json({ msg: 'job deleted' });
+  res.status(200).tson({ msg: 'job deleted' });
 });
 ```
 
 #### Not Found Middleware
 
-```js
+```ts
 app.use('*', (req, res) => {
-  res.status(404).json({ msg: 'not found' });
+  res.status(404).tson({ msg: 'not found' });
 });
 ```
 
 #### Error Middleware
 
-```js
+```ts
 app.use((err, req, res, next) => {
   console.log(err);
-  res.status(500).json({ msg: 'something went wrong' });
+  res.status(500).tson({ msg: 'something went wrong' });
 });
 ```
 
 #### Not Found and Error Middleware
 
-The "not found" middleware in Express.js is used when a request is made to a route that does not exist. It catches these requests and responds with a 404 status code, indicating that the requested resource was not found.
+The "not found" middleware in Express.ts is used when a request is made to a route that does not exist. It catches these requests and responds with a 404 status code, indicating that the requested resource was not found.
 
-On the other hand, the "error" middleware in Express.js is used to handle any errors that occur during the processing of a request. It is typically used to catch unexpected errors or exceptions that are not explicitly handled in the application code. It logs the error and sends a 500 status code, indicating an internal server error.
+On the other hand, the "error" middleware in Express.ts is used to handle any errors that occur during the processing of a request. It is typically used to catch unexpected errors or exceptions that are not explicitly handled in the application code. It logs the error and sends a 500 status code, indicating an internal server error.
 
 In summary, the "not found" middleware is specifically designed to handle requests for non-existent routes, while the "error" middleware is a catch-all for handling unexpected errors that occur during request processing.
 
 - make a request to "/jobss"
 
-```js
+```ts
 // GET ALL JOBS
 app.get('/api/v1/jobs', (req, res) => {
   // console.log(jobss);
-  res.status(200).json({ jobs });
+  res.status(200).tson({ jobs });
 });
 
 // GET SINGLE JOB
@@ -2022,9 +2022,9 @@ app.get('/api/v1/jobs/:id', (req, res) => {
   const job = jobs.find((job) => job.id === id);
   if (!job) {
     throw new Error('no job with that id');
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
-  res.status(200).json({ job });
+  res.status(200).tson({ job });
 });
 ```
 
@@ -2032,9 +2032,9 @@ app.get('/api/v1/jobs/:id', (req, res) => {
 
 setup controllers and router
 
-controllers/jobController.js
+controllers/jobController.ts
 
-```js
+```ts
 import { nanoid } from 'nanoid';
 
 let jobs = [
@@ -2043,19 +2043,19 @@ let jobs = [
 ];
 
 export const getAllJobs = async (req, res) => {
-  res.status(200).json({ jobs });
+  res.status(200).tson({ jobs });
 };
 
 export const createJob = async (req, res) => {
   const { company, position } = req.body;
 
   if (!company || !position) {
-    return res.status(400).json({ msg: 'please provide company and position' });
+    return res.status(400).tson({ msg: 'please provide company and position' });
   }
   const id = nanoid(10);
   const job = { id, company, position };
   jobs.push(job);
-  res.status(200).json({ job });
+  res.status(200).tson({ job });
 };
 
 export const getJob = async (req, res) => {
@@ -2063,43 +2063,43 @@ export const getJob = async (req, res) => {
   const job = jobs.find((job) => job.id === id);
   if (!job) {
     // throw new Error('no job with that id');
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
-  res.status(200).json({ job });
+  res.status(200).tson({ job });
 };
 
 export const updateJob = async (req, res) => {
   const { company, position } = req.body;
   if (!company || !position) {
-    return res.status(400).json({ msg: 'please provide company and position' });
+    return res.status(400).tson({ msg: 'please provide company and position' });
   }
   const { id } = req.params;
   const job = jobs.find((job) => job.id === id);
   if (!job) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
 
   job.company = company;
   job.position = position;
-  res.status(200).json({ msg: 'job modified', job });
+  res.status(200).tson({ msg: 'job modified', job });
 };
 
 export const deleteJob = async (req, res) => {
   const { id } = req.params;
   const job = jobs.find((job) => job.id === id);
   if (!job) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
   const newJobs = jobs.filter((job) => job.id !== id);
   jobs = newJobs;
 
-  res.status(200).json({ msg: 'job deleted' });
+  res.status(200).tson({ msg: 'job deleted' });
 };
 ```
 
-routes/jobRouter.js
+routes/jobRouter.ts
 
-```js
+```ts
 import { Router } from 'express';
 const router = Router();
 
@@ -2109,7 +2109,7 @@ import {
   createJob,
   updateJob,
   deleteJob,
-} from '../controllers/jobController.js';
+} from '../controllers/jobController.ts';
 
 // router.get('/', getAllJobs);
 // router.post('/', createJob);
@@ -2120,10 +2120,10 @@ router.route('/:id').get(getJob).patch(updateJob).delete(deleteJob);
 export default router;
 ```
 
-server.js
+server.ts
 
-```js
-import jobRouter from './routers/jobRouter.js';
+```ts
+import jobRouter from './routers/jobRouter.ts';
 app.use('/api/v1/jobs', jobRouter);
 ```
 
@@ -2131,23 +2131,23 @@ app.use('/api/v1/jobs', jobRouter);
 
 [MongoDb](https://www.mongodb.com/)
 
-MongoDB is a popular NoSQL database that provides a flexible and scalable approach to storing and retrieving data. It uses a document-oriented model, where data is organized into collections of JSON-like documents. MongoDB offers high performance, horizontal scalability, and easy integration with modern development frameworks, making it suitable for handling diverse data types and handling large-scale applications.
+MongoDB is a popular NoSQL database that provides a flexible and scalable approach to storing and retrieving data. It uses a document-oriented model, where data is organized into collections of tsON-like documents. MongoDB offers high performance, horizontal scalability, and easy integration with modern development frameworks, making it suitable for handling diverse data types and handling large-scale applications.
 
 MongoDB Atlas is a fully managed cloud database service provided by MongoDB, offering automated deployment, scaling, and monitoring of MongoDB clusters, allowing developers to focus on building their applications without worrying about infrastructure management.
 
-#### Mongoosejs
+#### Mongoosets
 
-[Mongoose](https://mongoosejs.com/)
+[Mongoose](https://mongoosets.com/)
 
-Mongoose is an Object Data Modeling (ODM) library for Node.js that provides a straightforward and elegant way to interact with MongoDB. It allows developers to define schemas and models for their data, providing structure and validation. Mongoose also offers features like data querying, middleware, and support for data relationships, making it a powerful tool for building MongoDB-based applications.
+Mongoose is an Object Data Modeling (ODM) library for Node.ts that provides a straightforward and elegant way to interact with MongoDB. It allows developers to define schemas and models for their data, providing structure and validation. Mongoose also offers features like data querying, middleware, and support for data relationships, making it a powerful tool for building MongoDB-based applications.
 
 ```sh
 npm i mongoose@7.0.5
 ```
 
-server.js
+server.ts
 
-```js
+```ts
 import mongoose from 'mongoose';
 
 try {
@@ -2163,11 +2163,11 @@ try {
 
 #### Job Model
 
-models/JobModel.js
+models/JobModel.ts
 
 enum - data type represents a field with a predefined set of values
 
-```js
+```ts
 import mongoose from 'mongoose';
 
 const JobSchema = new mongoose.Schema(
@@ -2197,39 +2197,39 @@ export default mongoose.model('Job', JobSchema);
 
 #### Create Job
 
-jobController.js
+jobController.ts
 
-```js
-import Job from '../models/JobModel.js';
+```ts
+import Job from '../models/JobModel.ts';
 
 export const createJob = async (req, res) => {
   const { company, position } = req.body;
   const job = await Job.create({ company, position });
-  res.status(201).json({ job });
+  res.status(201).tson({ job });
 };
 ```
 
 #### Try / Catch
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 export const createJob = async (req, res) => {
   const { company, position } = req.body;
   try {
     const job = await Job.create('something');
-    res.status(201).json({ job });
+    res.status(201).tson({ job });
   } catch (error) {
-    res.status(500).json({ msg: 'server error' });
+    res.status(500).tson({ msg: 'server error' });
   }
 };
 ```
 
 #### express-async-errors
 
-The "express-async-errors" package is an Express.js middleware that helps handle errors that occur within asynchronous functions. It catches unhandled errors inside async/await functions and forwards them to Express.js's error handling middleware, preventing the Node.js process from crashing. It simplifies error handling in Express.js applications by allowing you to write asynchronous code without worrying about manually catching and forwarding errors.
+The "express-async-errors" package is an Express.ts middleware that helps handle errors that occur within asynchronous functions. It catches unhandled errors inside async/await functions and forwards them to Express.ts's error handling middleware, preventing the Node.ts process from crashing. It simplifies error handling in Express.ts applications by allowing you to write asynchronous code without worrying about manually catching and forwarding errors.
 
-[Express Async Errors](https://www.npmjs.com/package/express-async-errors)
+[Express Async Errors](https://www.npmts.com/package/express-async-errors)
 
 ```sh
 npm i express-async-errors@3.1.1
@@ -2237,66 +2237,66 @@ npm i express-async-errors@3.1.1
 
 - setup import at the top !!!
 
-  server.js
+  server.ts
 
-```js
+```ts
 import 'express-async-errors';
 ```
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 export const createJob = async (req, res) => {
   const { company, position } = req.body;
 
   const job = await Job.create({ company, position });
-  res.status(201).json({ job });
+  res.status(201).tson({ job });
 };
 ```
 
 #### Get All Jobs
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 export const getAllJobs = async (req, res) => {
   const jobs = await Job.find({});
-  res.status(200).json({ jobs });
+  res.status(200).tson({ jobs });
 };
 ```
 
 #### Get Single Job
 
-```js
+```ts
 export const getJob = async (req, res) => {
   const { id } = req.params;
   const job = await Job.findById(id);
   if (!job) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
-  res.status(200).json({ job });
+  res.status(200).tson({ job });
 };
 ```
 
 #### Delete Job
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 export const deleteJob = async (req, res) => {
   const { id } = req.params;
   const removedJob = await Job.findByIdAndDelete(id);
 
   if (!removedJob) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
-  res.status(200).json({ job: removedJob });
+  res.status(200).tson({ job: removedJob });
 };
 ```
 
 #### Update Job
 
-```js
+```ts
 export const updateJob = async (req, res) => {
   const { id } = req.params;
 
@@ -2305,10 +2305,10 @@ export const updateJob = async (req, res) => {
   });
 
   if (!updatedJob) {
-    return res.status(404).json({ msg: `no job with id ${id}` });
+    return res.status(404).tson({ msg: `no job with id ${id}` });
   }
 
-  res.status(200).json({ job: updatedJob });
+  res.status(200).tson({ job: updatedJob });
 };
 ```
 
@@ -2316,7 +2316,7 @@ export const updateJob = async (req, res) => {
 
 A library for HTTP status codes is useful because it provides a comprehensive and standardized set of codes that represent the outcome of HTTP requests. It allows developers to easily understand and handle different scenarios during web development, such as successful responses, client or server errors, redirects, and more. By using a status code library, developers can ensure consistent and reliable communication between servers and clients, leading to better error handling and improved user experience.
 
-[Http Status Codes](https://www.npmjs.com/package/http-status-codes)
+[Http Status Codes](https://www.npmts.com/package/http-status-codes)
 
 ```sh
 npm i http-status-codes@2.2.0
@@ -2336,37 +2336,37 @@ npm i http-status-codes@2.2.0
 
 - refactor 200 response in all controllers
 
-jobController.js
+jobController.ts
 
-```js
-res.status(StatusCodes.OK).json({ jobs });
+```ts
+res.status(StatusCodes.OK).tson({ jobs });
 ```
 
 createJob
 
-```js
-res.status(StatusCodes.CREATED).json({ job });
+```ts
+res.status(StatusCodes.CREATED).tson({ job });
 ```
 
 #### Custom Error Class
 
 jobController
 
-```js
+```ts
 export const getJob = async (req, res) => {
   ....
   if (!job) {
     throw new Error('no job with that id');
-    // return res.status(404).json({ msg: `no job with id ${id}` });
+    // return res.status(404).tson({ msg: `no job with id ${id}` });
   }
   ...
 };
 
 ```
 
-errors/customErrors.js
+errors/customErrors.ts
 
-```js
+```ts
 import { StatusCodes } from 'http-status-codes';
 export class NotFoundError extends Error {
   constructor(message) {
@@ -2395,33 +2395,33 @@ By creating a custom error class like NotFoundError, you can provide more specif
 
 #### Custom Error
 
-jobController.js
+jobController.ts
 
-```js
-import { NotFoundError } from '../customErrors.js';
+```ts
+import { NotFoundError } from '../customErrors.ts';
 
 if (!job) throw new NotFoundError(`no job with id : ${id}`);
 ```
 
-middleware/errorHandlerMiddleware.js
+middleware/errorHandlerMiddleware.ts
 
-```js
+```ts
 import { StatusCodes } from 'http-status-codes';
 const errorHandlerMiddleware = (err, req, res, next) => {
   console.log(err);
   const statusCode = err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR;
   const msg = err.message || 'Something went wrong, try again later';
 
-  res.status(statusCode).json({ msg });
+  res.status(statusCode).tson({ msg });
 };
 
 export default errorHandlerMiddleware;
 ```
 
-server.js
+server.ts
 
-```js
-import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
+```ts
+import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.ts';
 
 app.use(errorHandlerMiddleware);
 ```
@@ -2433,9 +2433,9 @@ app.use(errorHandlerMiddleware);
 403 FORBIDDEN Forbidden
 404 NOT_FOUND Not Found
 
-customErrors.js
+customErrors.ts
 
-```js
+```ts
 export class BadRequestError extends Error {
   constructor(message) {
     super(message);
@@ -2469,18 +2469,18 @@ npm i express-validator@7.0.1
 
 #### Test Route
 
-server.js
+server.ts
 
-```js
+```ts
 app.post('/api/v1/test', (req, res) => {
   const { name } = req.body;
-  res.json({ msg: `hello ${name}` });
+  res.tson({ msg: `hello ${name}` });
 });
 ```
 
 #### Express Validator
 
-```js
+```ts
 import { body, validationResult } from 'express-validator';
 
 app.post(
@@ -2490,22 +2490,22 @@ app.post(
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       const errorMessages = errors.array().map((error) => error.msg);
-      return res.status(400).json({ errors: errorMessages });
+      return res.status(400).tson({ errors: errorMessages });
     }
     next();
   },
   (req, res) => {
     const { name } = req.body;
-    res.json({ msg: `hello ${name}` });
+    res.tson({ msg: `hello ${name}` });
   }
 );
 ```
 
 #### Validation Middleware
 
-middleware/validationMiddleware.js
+middleware/validationMiddleware.ts
 
-```js
+```ts
 import { body, validationResult } from 'express-validator';
 import { BadRequestError } from '../errors/customErrors';
 const withValidationErrors = (validateValues) => {
@@ -2536,9 +2536,9 @@ export const validateTest = withValidationErrors([
 
 #### Setup Constants
 
-utils/constants.js
+utils/constants.ts
 
-```js
+```ts
 export const JOB_STATUS = {
   PENDING: 'pending',
   INTERVIEW: 'interview',
@@ -2559,9 +2559,9 @@ export const JOB_SORT_BY = {
 };
 ```
 
-models/JobModel.js
+models/JobModel.ts
 
-```js
+```ts
 import mongoose from 'mongoose';
 import { JOB_STATUS, JOB_TYPE } from '../utils/constants';
 const JobSchema = new mongoose.Schema(
@@ -2589,10 +2589,10 @@ const JobSchema = new mongoose.Schema(
 
 #### Validate Create Job
 
-validationMiddleware.js
+validationMiddleware.ts
 
-```js
-import { JOB_STATUS, JOB_TYPE } from '../utils/constants.js';
+```ts
+import { JOB_STATUS, JOB_TYPE } from '../utils/constants.ts';
 
 export const validateJobInput = withValidationErrors([
   body('company').notEmpty().withMessage('company is required'),
@@ -2605,8 +2605,8 @@ export const validateJobInput = withValidationErrors([
 ]);
 ```
 
-```js
-import { validateJobInput } from '../middleware/validationMiddleware.js';
+```ts
+import { validateJobInput } from '../middleware/validationMiddleware.ts';
 
 router.route('/').get(getAllJobs).post(validateJobInput, createJob);
 router
@@ -2618,7 +2618,7 @@ router
 
 - create job request
 
-```json
+```tson
 {
   "company": "coding addict",
   "position": "backend-end",
@@ -2630,9 +2630,9 @@ router
 
 #### Validate ID Parameter
 
-validationMiddleware.js
+validationMiddleware.ts
 
-```js
+```ts
 import mongoose from 'mongoose';
 
 import { param } from 'express-validator';
@@ -2644,7 +2644,7 @@ export const validateIdParam = withValidationErrors([
 ]);
 ```
 
-```js
+```ts
 export const validateIdParam = withValidationErrors([
   param('id').custom(async (value) => {
     const isValidId = mongoose.Types.ObjectId.isValid(value);
@@ -2655,12 +2655,12 @@ export const validateIdParam = withValidationErrors([
 ]);
 ```
 
-```js
+```ts
 import { body, param, validationResult } from 'express-validator';
-import { BadRequestError, NotFoundError } from '../errors/customErrors.js';
-import { JOB_STATUS, JOB_TYPE } from '../utils/constants.js';
+import { BadRequestError, NotFoundError } from '../errors/customErrors.ts';
+import { JOB_STATUS, JOB_TYPE } from '../utils/constants.ts';
 import mongoose from 'mongoose';
-import Job from '../models/JobModel.js';
+import Job from '../models/JobModel.ts';
 
 const withValidationErrors = (validateValues) => {
   return [
@@ -2686,9 +2686,9 @@ const withValidationErrors = (validateValues) => {
 
 #### User Model
 
-models/UserModel.js
+models/UserModel.ts
 
-```js
+```ts
 import mongoose from 'mongoose';
 
 const UserSchema = new mongoose.Schema({
@@ -2715,9 +2715,9 @@ export default mongoose.model('User', UserSchema);
 
 #### User Controller and Router
 
-controllers/authController.js
+controllers/authController.ts
 
-```js
+```ts
 export const register = async (req, res) => {
   res.send('register');
 };
@@ -2726,11 +2726,11 @@ export const login = async (req, res) => {
 };
 ```
 
-routers/authRouter.js
+routers/authRouter.ts
 
-```js
+```ts
 import { Router } from 'express';
-import { register, login } from '../controllers/authController.js';
+import { register, login } from '../controllers/authController.ts';
 const router = Router();
 
 router.post('/register', register);
@@ -2739,31 +2739,31 @@ router.post('/login', login);
 export default router;
 ```
 
-server.js
+server.ts
 
-```js
-import authRouter from './routers/authRouter.js';
+```ts
+import authRouter from './routers/authRouter.ts';
 
 app.use('/api/v1/auth', authRouter);
 ```
 
 #### Create User - Initial Setup
 
-authController.js
+authController.ts
 
-```js
+```ts
 import { StatusCodes } from 'http-status-codes';
-import User from '../models/UserModel.js';
+import User from '../models/UserModel.ts';
 
 export const register = async (req, res) => {
   const user = await User.create(req.body);
-  res.status(StatusCodes.CREATED).json({ user });
+  res.status(StatusCodes.CREATED).tson({ user });
 };
 ```
 
 - register user request
 
-```json
+```tson
 {
   "name": "john",
   "email": "john@gmail.com",
@@ -2775,10 +2775,10 @@ export const register = async (req, res) => {
 
 #### Validate User
 
-validationMiddleware.js
+validationMiddleware.ts
 
-```js
-import User from '../models/UserModel.js';
+```ts
+import User from '../models/UserModel.ts';
 
 export const validateRegisterInput = withValidationErrors([
   body('name').notEmpty().withMessage('name is required'),
@@ -2803,19 +2803,19 @@ export const validateRegisterInput = withValidationErrors([
 ]);
 ```
 
-authRouter.js
+authRouter.ts
 
-```js
-import { validateRegisterInput } from '../middleware/validationMiddleware.js';
+```ts
+import { validateRegisterInput } from '../middleware/validationMiddleware.ts';
 
 router.post('/register', validateRegisterInput, register);
 ```
 
 #### Admin Role
 
-authController.js
+authController.ts
 
-```js
+```ts
 // first registered user is an admin
 const isFirstAccount = (await User.countDocuments()) === 0;
 req.body.role = isFirstAccount ? 'admin' : 'user';
@@ -2825,17 +2825,17 @@ const user = await User.create(req.body);
 
 #### Hash Passwords
 
-[bcryptjs](https://www.npmjs.com/package/bcryptjs)
+[bcryptts](https://www.npmts.com/package/bcryptts)
 
 ```sh
-npm i bcryptjs@2.4.3
+npm i bcryptts@2.4.3
 
 ```
 
-authController.js
+authController.ts
 
-```js
-import bcrypt from 'bcryptjs';
+```ts
+import bcrypt from 'bcryptts';
 
 const register = async (req, res) => {
   // a random value that is added to the password before hashing
@@ -2859,24 +2859,24 @@ The resulting hash value is a string that represents the hashed password. This s
 
 By using a salt value and a one-way hash function, bcrypt helps to ensure that user passwords are stored securely and are resistant to attacks like password cracking and brute-force attacks.
 
-##### BCRYPT VS BCRYPTJS
+##### BCRYPT VS BCRYPTts
 
-bcrypt and bcryptjs are both popular libraries for hashing passwords in Node.js applications. However, bcryptjs is considered to be a better choice for a few reasons:
+bcrypt and bcryptts are both popular libraries for hashing passwords in Node.ts applications. However, bcryptts is considered to be a better choice for a few reasons:
 
-Cross-platform compatibility: bcrypt is a native Node.js module that uses C++ bindings, which can make it difficult to install and use on some platforms. bcryptjs, on the other hand, is a pure JavaScript implementation that works on any platform.
+Cross-platform compatibility: bcrypt is a native Node.ts module that uses C++ bindings, which can make it difficult to install and use on some platforms. bcryptts, on the other hand, is a pure JavaScript implementation that works on any platform.
 
-Security: While both bcrypt and bcryptjs use the same underlying algorithm for hashing passwords, bcryptjs is designed to be more resistant to certain types of attacks, such as side-channel attacks.
+Security: While both bcrypt and bcryptts use the same underlying algorithm for hashing passwords, bcryptts is designed to be more resistant to certain types of attacks, such as side-channel attacks.
 
-Ease of use: bcryptjs has a simpler and more intuitive API than bcrypt, which can make it easier to use and integrate into your application.
+Ease of use: bcryptts has a simpler and more intuitive API than bcrypt, which can make it easier to use and integrate into your application.
 
-Overall, while bcrypt and bcryptjs are both good choices for hashing passwords in Node.js applications, bcryptjs is considered to be a better choice for its cross-platform compatibility, improved security, ease of use, and ongoing maintenance.
+Overall, while bcrypt and bcryptts are both good choices for hashing passwords in Node.ts applications, bcryptts is considered to be a better choice for its cross-platform compatibility, improved security, ease of use, and ongoing maintenance.
 
 #### Setup Password Utils
 
-utils/passwordUtils.js
+utils/passwordUtils.ts
 
-```js
-import bcrypt from 'bcryptjs';
+```ts
+import bcrypt from 'bcryptts';
 
 export async function hashPassword(password) {
   const salt = await bcrypt.genSalt(10);
@@ -2885,17 +2885,17 @@ export async function hashPassword(password) {
 }
 ```
 
-authController.js
+authController.ts
 
-```js
-import { hashPassword } from '../utils/passwordUtils.js';
+```ts
+import { hashPassword } from '../utils/passwordUtils.ts';
 
 const register = async (req, res) => {
   const hashedPassword = await hashPassword(req.body.password);
   req.body.password = hashedPassword;
 
   const user = await User.create(req.body);
-  res.status(StatusCodes.CREATED).json({ msg: 'user created' });
+  res.status(StatusCodes.CREATED).tson({ msg: 'user created' });
 };
 ```
 
@@ -2903,16 +2903,16 @@ const register = async (req, res) => {
 
 - login user request
 
-```json
+```tson
 {
   "email": "john@gmail.com",
   "password": "secret123"
 }
 ```
 
-validationMiddleware.js
+validationMiddleware.ts
 
-```js
+```ts
 export const validateLoginInput = withValidationErrors([
   body('email')
     .notEmpty()
@@ -2923,20 +2923,20 @@ export const validateLoginInput = withValidationErrors([
 ]);
 ```
 
-authRouter.js
+authRouter.ts
 
-```js
-import { validateLoginInput } from '../middleware/validationMiddleware.js';
+```ts
+import { validateLoginInput } from '../middleware/validationMiddleware.ts';
 
 router.post('/login', validateLoginInput, login);
 ```
 
 #### Unauthenticated Error
 
-authController.js
+authController.ts
 
-```js
-import { UnauthenticatedError } from '../errors/customErrors.js';
+```ts
+import { UnauthenticatedError } from '../errors/customErrors.ts';
 
 const login = async (req, res) => {
   // check if user exists
@@ -2951,19 +2951,19 @@ const login = async (req, res) => {
 
 #### Compare Password
 
-passwordUtils.js
+passwordUtils.ts
 
-```js
+```ts
 export async function comparePassword(password, hashedPassword) {
   const isMatch = await bcrypt.compare(password, hashedPassword);
   return isMatch;
 }
 ```
 
-authController.js
+authController.ts
 
-```js
-import { hashPassword, comparePassword } from '../utils/passwordUtils.js';
+```ts
+import { hashPassword, comparePassword } from '../utils/passwordUtils.ts';
 
 const login = async (req, res) => {
   // check if user exists
@@ -2985,25 +2985,25 @@ const login = async (req, res) => {
 
 Refactor
 
-```js
+```ts
 const isValidUser = user && (await comparePassword(password, user.password));
 if (!isValidUser) throw new UnauthenticatedError('invalid credentials');
 ```
 
-#### JSON Web Token
+#### tsON Web Token
 
-A JSON Web Token (JWT) is a compact and secure way of transmitting data between parties. It is often used to authenticate and authorize users in web applications and APIs. JWTs contain information about the user and additional metadata, and can be used to securely transmit this information
+A tsON Web Token (JWT) is a compact and secure way of transmitting data between parties. It is often used to authenticate and authorize users in web applications and APIs. JWTs contain information about the user and additional metadata, and can be used to securely transmit this information
 
 [Useful Resource](https://jwt.io/introduction)
 
 ```sh
-npm i jsonwebtoken@9.0.0
+npm i tsonwebtoken@9.0.0
 ```
 
-utils/tokenUtils.js
+utils/tokenUtils.ts
 
-```js
-import jwt from 'jsonwebtoken';
+```ts
+import jwt from 'tsonwebtoken';
 
 export const createJWT = (payload) => {
   const token = jwt.sign(payload, process.env.JWT_SECRET, {
@@ -3019,10 +3019,10 @@ JWT_EXPIRES_IN specifies the expiration time for the JWT. It determines how long
 
 These environment variables (JWT_SECRET and JWT_EXPIRES_IN) are read from the system environment during runtime, allowing for flexibility in configuration without modifying the code.
 
-authController.js
+authController.ts
 
-```js
-import { createJWT } from '../utils/tokenUtils.js';
+```ts
+import { createJWT } from '../utils/tokenUtils.ts';
 
 const token = createJWT({ userId: user._id, role: user.role });
 console.log(token);
@@ -3038,7 +3038,7 @@ console.log(token);
 
 .env
 
-```js
+```ts
 JWT_SECRET=
 JWT_EXPIRES_IN=
 ```
@@ -3051,9 +3051,9 @@ An HTTP-only cookie is a cookie that can't be accessed by JavaScript running in 
 
 An HTTP-only cookie is a type of cookie that is designed to be inaccessible to JavaScript running in the browser. It is primarily used for authentication purposes and is a more secure way of storing sensitive information like user tokens. Local storage, on the other hand, is a browser-based storage mechanism that is accessible to JavaScript, and is used to store application data like preferences or user-generated content. While local storage is convenient, it is not a secure way of storing sensitive information as it can be accessed and modified by JavaScript running in the browser.
 
-authControllers.js
+authControllers.ts
 
-```js
+```ts
 const oneDay = 1000 * 60 * 60 * 24;
 
 res.cookie('token', token, {
@@ -3062,16 +3062,16 @@ res.cookie('token', token, {
   secure: process.env.NODE_ENV === 'production',
 });
 
-res.status(StatusCodes.CREATED).json({ msg: 'user logged in' });
+res.status(StatusCodes.CREATED).tson({ msg: 'user logged in' });
 ```
 
-```js
+```ts
 const oneDay = 1000 * 60 * 60 * 24;
 ```
 
 This line defines a constant oneDay that represents the number of milliseconds in a day. This value is used later to set the expiration time for the cookie.
 
-```js
+```ts
 res.cookie('token', token, {...});:
 ```
 
@@ -3083,13 +3083,13 @@ expires: new Date(Date.now() + oneDay): This option sets the expiration time for
 
 secure: process.env.NODE_ENV === 'production': This option determines whether the cookie should be marked as secure or not. If the NODE_ENV environment variable is set to "production", then the cookie is marked as secure, which means it can only be transmitted over HTTPS. This helps to prevent man-in-the-middle (MITM) attacks, which can intercept and modify cookies that are transmitted over unsecured connections.
 
-jobsController.js
+jobsController.ts
 
-```js
+```ts
 export const getAllJobs = async (req, res) => {
   console.log(req);
   const jobs = await Job.find({});
-  res.status(StatusCodes.OK).json({ jobs });
+  res.status(StatusCodes.OK).tson({ jobs });
 };
 ```
 
@@ -3097,9 +3097,9 @@ export const getAllJobs = async (req, res) => {
 
 #### Connect User and Job
 
-models/User.js
+models/User.ts
 
-```js
+```ts
 const JobSchema = new mongoose.Schema(
   {
     ....
@@ -3114,44 +3114,44 @@ const JobSchema = new mongoose.Schema(
 
 #### Auth Middleware
 
-middleware/authMiddleware.js
+middleware/authMiddleware.ts
 
-```js
+```ts
 export const authenticateUser = async (req, res, next) => {
   console.log('auth middleware');
   next();
 };
 ```
 
-server.js
+server.ts
 
-```js
-import { authenticateUser } from './middleware/authMiddleware.js';
+```ts
+import { authenticateUser } from './middleware/authMiddleware.ts';
 
 app.use('/api/v1/jobs', authenticateUser, jobRouter);
 ```
 
 ##### Cookie Parser
 
-[Cookie Parser](https://www.npmjs.com/package/cookie-parser)
+[Cookie Parser](https://www.npmts.com/package/cookie-parser)
 
 ```sh
 npm i cookie-parser@1.4.6
 ```
 
-server.js
+server.ts
 
-```js
+```ts
 import cookieParser from 'cookie-parser';
 app.use(cookieParser());
 ```
 
 #### Access Token
 
-authMiddleware.js
+authMiddleware.ts
 
-```js
-import { UnauthenticatedError } from '../customErrors.js';
+```ts
+import { UnauthenticatedError } from '../customErrors.ts';
 
 export const authenticateUser = async (req, res, next) => {
   const { token } = req.cookies;
@@ -3164,20 +3164,20 @@ export const authenticateUser = async (req, res, next) => {
 
 #### Verify Token
 
-utils/tokenUtils.js
+utils/tokenUtils.ts
 
-```js
+```ts
 export const verifyJWT = (token) => {
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
   return decoded;
 };
 ```
 
-authMiddleware.js
+authMiddleware.ts
 
-```js
-import { UnauthenticatedError } from '../customErrors.js';
-import { verifyJWT } from '../utils/tokenUtils.js';
+```ts
+import { UnauthenticatedError } from '../customErrors.ts';
+import { verifyJWT } from '../utils/tokenUtils.ts';
 
 export const authenticateUser = async (req, res, next) => {
   const { token } = req.cookies;
@@ -3195,33 +3195,33 @@ export const authenticateUser = async (req, res, next) => {
 };
 ```
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 export const getAllJobs = async (req, res) => {
   console.log(req.user);
   const jobs = await Job.find({ createdBy: req.user.userId });
-  res.status(StatusCodes.OK).json({ jobs });
+  res.status(StatusCodes.OK).tson({ jobs });
 };
 ```
 
 #### Refactor Create Job
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 export const createJob = async (req, res) => {
   req.body.createdBy = req.user.userId;
   const job = await Job.create(req.body);
-  res.status(StatusCodes.CREATED).json({ job });
+  res.status(StatusCodes.CREATED).tson({ job });
 };
 ```
 
 #### Check Permissions
 
-validationMiddleware.js
+validationMiddleware.ts
 
-```js
+```ts
 const withValidationErrors = (validateValues) => {
   return [
     validateValues,
@@ -3241,12 +3241,12 @@ const withValidationErrors = (validateValues) => {
 };
 ```
 
-```js
+```ts
 import {
   BadRequestError,
   NotFoundError,
   UnauthorizedError,
-} from '../errors/customErrors.js';
+} from '../errors/customErrors.ts';
 
 export const validateIdParam = withValidationErrors([
   param('id').custom(async (value, { req }) => {
@@ -3264,24 +3264,24 @@ export const validateIdParam = withValidationErrors([
 
 #### Logout User
 
-controllers/authController.js
+controllers/authController.ts
 
-```js
+```ts
 const logout = (req, res) => {
   res.cookie('token', 'logout', {
     httpOnly: true,
     expires: new Date(Date.now()),
   });
-  res.status(StatusCodes.OK).json({ msg: 'user logged out!' });
+  res.status(StatusCodes.OK).tson({ msg: 'user logged out!' });
 };
 ```
 
-routes/authRouter.js
+routes/authRouter.ts
 
-```js
+```ts
 import { Router } from 'express';
 const router = Router();
-import { logout } from '../controllers/authController.js';
+import { logout } from '../controllers/authController.ts';
 
 router.get('/logout', logout);
 
@@ -3290,29 +3290,29 @@ export default router;
 
 #### User Routes
 
-controllers/userController.js
+controllers/userController.ts
 
-```js
+```ts
 import { StatusCodes } from 'http-status-codes';
-import User from '../models/User.js';
-import Job from '../models/Job.js';
+import User from '../models/User.ts';
+import Job from '../models/Job.ts';
 
 export const getCurrentUser = async (req, res) => {
-  res.status(StatusCodes.OK).json({ msg: 'get current user' });
+  res.status(StatusCodes.OK).tson({ msg: 'get current user' });
 };
 
 export const getApplicationStats = async (req, res) => {
-  res.status(StatusCodes.OK).json({ msg: 'application stats' });
+  res.status(StatusCodes.OK).tson({ msg: 'application stats' });
 };
 
 export const updateUser = async (req, res) => {
-  res.status(StatusCodes.OK).json({ msg: 'update user' });
+  res.status(StatusCodes.OK).tson({ msg: 'update user' });
 };
 ```
 
-routes/userRouter.js
+routes/userRouter.ts
 
-```js
+```ts
 import { Router } from 'express';
 const router = Router();
 
@@ -3320,7 +3320,7 @@ import {
   getCurrentUser,
   getApplicationStats,
   updateUser,
-} from '../controllers/userController.js';
+} from '../controllers/userController.ts';
 
 router.get('/current-user', getCurrentUser);
 router.get('/admin/app-stats', getApplicationStats);
@@ -3328,48 +3328,48 @@ router.patch('/update-user', updateUser);
 export default router;
 ```
 
-server.js
+server.ts
 
-```js
-import userRouter from './routers/userRouter.js';
+```ts
+import userRouter from './routers/userRouter.ts';
 
 app.use('/api/v1/users', authenticateUser, userRouter);
 ```
 
 #### Get Current User
 
-```js
+```ts
 export const getCurrentUser = async (req, res) => {
   const user = await User.findOne({ _id: req.user.userId });
-  res.status(StatusCodes.OK).json({ user });
+  res.status(StatusCodes.OK).tson({ user });
 };
 ```
 
 #### Remove Password
 
-models/UserModel.js
+models/UserModel.ts
 
-```js
-UserSchema.methods.toJSON = function () {
+```ts
+UserSchema.methods.totsON = function () {
   var obj = this.toObject();
   delete obj.password;
   return obj;
 };
 ```
 
-```js
+```ts
 export const getCurrentUser = async (req, res) => {
   const user = await User.findOne({ _id: req.user.userId });
-  const userWithoutPassword = user.toJSON();
-  res.status(StatusCodes.OK).json({ user: userWithoutPassword });
+  const userWithoutPassword = user.totsON();
+  res.status(StatusCodes.OK).tson({ user: userWithoutPassword });
 };
 ```
 
 #### Update User
 
-middleware/validationMiddleware.js
+middleware/validationMiddleware.ts
 
-```js
+```ts
 const validateUpdateUserInput = withValidationErrors([
   body('name').notEmpty().withMessage('name is required'),
   body('email')
@@ -3388,14 +3388,14 @@ const validateUpdateUserInput = withValidationErrors([
 ]);
 ```
 
-```js
+```ts
 export const updateUser = async (req, res) => {
   const updatedUser = await User.findByIdAndUpdate(req.user.userId, req.body);
-  res.status(StatusCodes.OK).json({ msg: 'user updated' });
+  res.status(StatusCodes.OK).tson({ msg: 'user updated' });
 };
 ```
 
-```json
+```tson
 {
   "name": "john",
   "email": "john@gmail.com",
@@ -3406,15 +3406,15 @@ export const updateUser = async (req, res) => {
 
 #### Application Stats
 
-```js
+```ts
 export const getApplicationStats = async (req, res) => {
   const users = await User.countDocuments();
   const jobs = await Job.countDocuments();
-  res.status(StatusCodes.OK).json({ users, jobs });
+  res.status(StatusCodes.OK).tson({ users, jobs });
 };
 ```
 
-```js
+```ts
 export const authorizePermissions = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
@@ -3425,8 +3425,8 @@ export const authorizePermissions = (...roles) => {
 };
 ```
 
-```js
-import { authorizePermissions } from '../middleware/authMiddleware.js';
+```ts
+import { authorizePermissions } from '../middleware/authMiddleware.ts';
 
 router.get('/admin/app-stats', [
   authorizePermissions('admin'),
@@ -3452,25 +3452,25 @@ npm run dev
 cd client && npm run dev
 ```
 
-server.js
+server.ts
 
-```js
+```ts
 app.get('/api/v1/test', (req, res) => {
-  res.json({ msg: 'test route' });
+  res.tson({ msg: 'test route' });
 });
 ```
 
-client/src/main.jsx
+client/src/main.tsx
 
-```js
+```ts
 fetch('http://localhost:5100/api/v1/test')
-  .then((res) => res.json())
+  .then((res) => res.tson())
   .then((data) => console.log(data));
 ```
 
-client/vite.config.js
+client/vite.config.ts
 
-```js
+```ts
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -3485,11 +3485,11 @@ export default defineConfig({
 });
 ```
 
-main.jsx
+main.tsx
 
-```js
+```ts
 fetch('/api/v1/test')
-  .then((res) => res.json())
+  .then((res) => res.tson())
   .then((data) => console.log(data));
 ```
 
@@ -3512,7 +3512,7 @@ The concurrently npm package is a utility that allows you to run multiple comman
 npm i concurrently@8.0.1
 ```
 
-```json
+```tson
 "scripts": {
     "setup-project": "npm i && cd client && npm i",
     "server": "nodemon server",
@@ -3525,7 +3525,7 @@ By default, when a command fails, concurrently continues running the remaining c
 
 #### Axios
 
-Axios is a popular JavaScript library that simplifies the process of making HTTP requests from web browsers or Node.js. It provides a simple and elegant API for performing asynchronous HTTP requests, supporting features such as making GET, POST, PUT, and DELETE requests, handling request and response headers, handling request cancellation, and more.
+Axios is a popular JavaScript library that simplifies the process of making HTTP requests from web browsers or Node.ts. It provides a simple and elegant API for performing asynchronous HTTP requests, supporting features such as making GET, POST, PUT, and DELETE requests, handling request and response headers, handling request cancellation, and more.
 
 [Axios Docs](https://axios-http.com/docs/intro)
 
@@ -3533,9 +3533,9 @@ Axios is a popular JavaScript library that simplifies the process of making HTTP
 npm i axios@1.3.6
 ```
 
-main.jsx
+main.tsx
 
-```js
+```ts
 import axios from 'axios';
 
 const data = await axios.get('/api/v1/test');
@@ -3544,9 +3544,9 @@ console.log(data);
 
 #### Custom Instance
 
-utils/customFetch.js
+utils/customFetch.ts
 
-```js
+```ts
 import axios from 'axios';
 const customFetch = axios.create({
   baseURL: '/api/v1',
@@ -3555,10 +3555,10 @@ const customFetch = axios.create({
 export default customFetch;
 ```
 
-main.jsx
+main.tsx
 
-```js
-import customFetch from './utils/customFetch.js';
+```ts
+import customFetch from './utils/customFetch.ts';
 
 const data = await customFetch.get('/test');
 console.log(data);
@@ -3566,7 +3566,7 @@ console.log(data);
 
 #### Typical Form Submission
 
-```js
+```ts
 import { useState } from 'react';
 import axios from 'axios';
 const MyForm = () => {
@@ -3587,9 +3587,9 @@ export default MyForm;
 
 Route actions are the "writes" to route loader "reads". They provide a way for apps to perform data mutations with simple HTML and HTTP semantics while React Router abstracts away the complexity of asynchronous UI and revalidation. This gives you the simple mental model of HTML + HTTP (where the browser handles the asynchrony and revalidation) with the behavior and UX capabilities of modern SPAs.
 
-Register.jsx
+Register.tsx
 
-```js
+```ts
 import { Form, redirect, useNavigation, Link } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 import { FormRow, Logo } from '../components';
@@ -3606,9 +3606,9 @@ const Register = () => {
 export default Register;
 ```
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 {
   path: 'register',
   element: <Register />,
@@ -3623,12 +3623,12 @@ App.jsx
 
 - FormData API
 
-[FormData API - JS Nuggets](https://youtu.be/5-x4OUM-SP8)
+[FormData API - ts Nuggets](https://youtu.be/5-x4OUM-SP8)
 [FormData API - React ](https://youtu.be/WrX5RndZIzw)
 
-Register.jsx
+Register.tsx
 
-```js
+```ts
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
@@ -3641,9 +3641,9 @@ export const action = async ({ request }) => {
 };
 ```
 
-App.jsx
+App.tsx
 
-```jsx
+```tsx
 import { action as registerAction } from './pages/Register';
 
 {
@@ -3666,9 +3666,9 @@ idle - There is no navigation pending.
 submitting - A route action is being called due to a form submission using POST, PUT, PATCH, or DELETE
 loading - The loaders for the next routes are being called to render the next page
 
-Register.jsx
+Register.tsx
 
-```js
+```ts
 const Register = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
@@ -3697,9 +3697,9 @@ Import and set up the react-toastify library.
 npm i react-toastify@9.1.2
 ```
 
-main.jsx
+main.tsx
 
-```js
+```ts
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -3710,9 +3710,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 );
 ```
 
-Register.jsx
+Register.tsx
 
-```js
+```ts
 import { toast } from 'react-toastify';
 
 export const action = async ({ request }) => {
@@ -3731,7 +3731,7 @@ export const action = async ({ request }) => {
 
 #### Login User
 
-```js
+```ts
 import { Link, Form, redirect, useNavigation } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 import { FormRow, Logo } from '../components';
@@ -3782,7 +3782,7 @@ export default Login;
 
 #### Access Action Data (optional)
 
-```js
+```ts
 import { useActionData } from 'react-router-dom';
 
 export const action = async ({ request }) => {
@@ -3826,9 +3826,9 @@ Each route can define a "loader" function to provide data to the route element b
 
 - must return a value
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```jsx
+```tsx
 import { Outlet, redirect, useLoaderData } from 'react-router-dom';
 import customFetch from '../utils/customFetch';
 
@@ -3875,9 +3875,9 @@ export default DashboardLayout;
 
 #### Logout User
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```js
+```ts
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -3894,9 +3894,9 @@ const DashboardLayout = () => {
 
 #### AddJob - Structure
 
-pages/AddJob.jsx
+pages/AddJob.tsx
 
-```js
+```ts
 import { FormRow } from '../components';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { useOutletContext } from 'react-router-dom';
@@ -3942,7 +3942,7 @@ export default AddJob;
 
 #### Select Input
 
-```js
+```ts
 <div className='form-row'>
   <label htmlFor='jobStatus' className='form-label'>
     job status
@@ -3966,9 +3966,9 @@ export default AddJob;
 
 #### FormRowSelect Component
 
-components/FormRowSelect.jsx
+components/FormRowSelect.tsx
 
-```js
+```ts
 const FormRowSelect = ({ name, labelText, list, defaultValue = '' }) => {
   return (
     <div className='form-row'>
@@ -3995,9 +3995,9 @@ const FormRowSelect = ({ name, labelText, list, defaultValue = '' }) => {
 export default FormRowSelect;
 ```
 
-pages/AddJob.jsx
+pages/AddJob.tsx
 
-```js
+```ts
 <FormRowSelect
   labelText='job status'
   name='jobStatus'
@@ -4014,9 +4014,9 @@ pages/AddJob.jsx
 
 #### Create Job
 
-AddJob.jsx
+AddJob.tsx
 
-```js
+```ts
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
@@ -4034,7 +4034,7 @@ export const action = async ({ request }) => {
 
 #### Pending Class and Redirect
 
-wrappers/BigSidebar.js
+wrappers/BigSidebar.ts
 
 ```css
 .pending {
@@ -4042,9 +4042,9 @@ wrappers/BigSidebar.js
 }
 ```
 
-AddJob.jsx
+AddJob.tsx
 
-```js
+```ts
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
@@ -4062,9 +4062,9 @@ export const action = async ({ request }) => {
 
 #### Add Job - CSS(optional)
 
-wrappers/DashboardFormPage.js
+wrappers/DashboardFormPage.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -4119,9 +4119,9 @@ export default Wrapper;
 #### All Jobs - Structure
 
 - create JobsContainer and SearchContainer (export)
-- handle loader in App.jsx
+- handle loader in App.tsx
 
-```js
+```ts
 import { toast } from 'react-toastify';
 import { JobsContainer, SearchContainer } from '../components';
 import customFetch from '../utils/customFetch';
@@ -4155,7 +4155,7 @@ export default AllJobs;
 
 #### Setup All Jobs Context
 
-```js
+```ts
 const AllJobsContext = createContext();
 
 const AllJobs = () => {
@@ -4174,11 +4174,11 @@ export const useAllJobsContext = () => useContext(AllJobsContext);
 
 #### Render Jobs
 
-- create Job.jsx
+- create Job.tsx
 
-JobsContainer.jsx
+JobsContainer.tsx
 
-```js
+```ts
 import Job from './Job';
 import Wrapper from '../assets/wrappers/JobsContainer';
 
@@ -4211,9 +4211,9 @@ export default JobsContainer;
 
 #### JobsContainer - CSS (optional)
 
-wrappers/JobsContainer.js
+wrappers/JobsContainer.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -4241,26 +4241,26 @@ const Wrapper = styled.section`
 export default Wrapper;
 ```
 
-#### Dayjs
+#### Dayts
 
 ```sh
-npm i dayjs@1.11.7
+npm i dayts@1.11.7
 ```
 
-[Dayjs Docs](https://day.js.org/docs/en/installation/installation)
+[Dayts Docs](https://day.ts.org/docs/en/installation/installation)
 
 #### Job Component
 
 - create JobInfo component
 
-```js
+```ts
 import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/Job';
 import JobInfo from './JobInfo';
 import { Form } from 'react-router-dom';
-import day from 'dayjs';
-import advancedFormat from 'dayjs/plugin/advancedFormat';
+import day from 'dayts';
+import advancedFormat from 'dayts/plugin/advancedFormat';
 day.extend(advancedFormat);
 
 const Job = ({
@@ -4309,7 +4309,7 @@ export default Job;
 
 #### JobInfo Component
 
-```js
+```ts
 import Wrapper from '../assets/wrappers/JobInfo';
 
 const JobInfo = ({ icon, text }) => {
@@ -4326,9 +4326,9 @@ export default JobInfo;
 
 #### JobInfo - CSS (optional)
 
-wrappers/JobInfo.js
+wrappers/JobInfo.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -4354,7 +4354,7 @@ export default Wrapper;
 
 #### Job - CSS (optional)
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.article`
@@ -4443,17 +4443,17 @@ export default Wrapper;
 
 #### Edit Job - Setup
 
-Job.jsx
+Job.tsx
 
-```js
+```ts
 <Link to={`../edit-job/${_id}`} className='btn edit-btn'>
   Edit
 </Link>
 ```
 
-pages/EditJob.jsx
+pages/EditJob.tsx
 
-```js
+```ts
 import { FormRow, FormRowSelect } from '../components';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { useLoaderData } from 'react-router-dom';
@@ -4476,9 +4476,9 @@ export default EditJob;
 ```
 
 - import EditJob page
-  App.jsx
+  App.tsx
 
-```js
+```ts
 import { loader as editJobLoader } from './pages/EditJob';
 import { action as editJobAction } from './pages/EditJob';
 
@@ -4491,9 +4491,9 @@ import { action as editJobAction } from './pages/EditJob';
 },
 ```
 
-pages/EditJob.jsx
+pages/EditJob.tsx
 
-```js
+```ts
 export const loader = async ({ params }) => {
   try {
     const { data } = await customFetch.get(`/jobs/${params.id}`);
@@ -4521,7 +4521,7 @@ export default EditJob;
 
 #### Edit Job - Complete
 
-```js
+```ts
 export const action = async ({ request, params }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
@@ -4586,9 +4586,9 @@ export default EditJob;
 
 #### Delete Job
 
-Job.jsx
+Job.tsx
 
-```js
+```ts
 <Form method='post' action={`../delete-job/${_id}`}>
   <button type='submit' className='btn delete-btn'>
     Delete
@@ -4596,9 +4596,9 @@ Job.jsx
 </Form>
 ```
 
-pages/DeleteJob.jsx
+pages/DeleteJob.tsx
 
-```js
+```ts
 import { redirect } from 'react-router-dom';
 import customFetch from '../utils/customFetch';
 import { toast } from 'react-toastify';
@@ -4614,9 +4614,9 @@ export async function action({ params }) {
 }
 ```
 
-App.jsx
+App.tsx
 
-```js
+```ts
 import { action as deleteJobAction } from './pages/DeleteJob';
 
  { path: 'delete-job/:id', action: deleteJobAction },
@@ -4624,9 +4624,9 @@ import { action as deleteJobAction } from './pages/DeleteJob';
 
 #### Admin Page
 
-pages/Admin.jsx
+pages/Admin.tsx
 
-```js
+```ts
 import { FaSuitcaseRolling, FaCalendarCheck } from 'react-icons/fa';
 
 import { useLoaderData, redirect } from 'react-router-dom';
@@ -4655,9 +4655,9 @@ const Admin = () => {
 export default Admin;
 ```
 
-App.jsx
+App.tsx
 
-```js
+```ts
 import { loader as adminLoader } from './pages/Admin';
 
 {
@@ -4668,9 +4668,9 @@ import { loader as adminLoader } from './pages/Admin';
 
 ```
 
-NavLinks.jsx
+NavLinks.tsx
 
-```js
+```ts
 {
   links.map((link) => {
     const { text, path, icon } = link;
@@ -4682,12 +4682,12 @@ NavLinks.jsx
 
 #### StatItem Component
 
-- create StatItem.jsx
+- create StatItem.tsx
 - import/export
 
-  StatItem.jsx
+  StatItem.tsx
 
-```js
+```ts
 import Wrapper from '../assets/wrappers/StatItem';
 
 const StatItem = ({ count, title, icon, color, bcg }) => {
@@ -4705,9 +4705,9 @@ const StatItem = ({ count, title, icon, color, bcg }) => {
 export default StatItem;
 ```
 
-Admin.jsx
+Admin.tsx
 
-```js
+```ts
 import { StatItem } from '../components';
 
 const Admin = () => {
@@ -4737,9 +4737,9 @@ export default Admin;
 
 #### Admin - CSS (optional)
 
-wrappers/StatsContainer.js
+wrappers/StatsContainer.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -4757,9 +4757,9 @@ const Wrapper = styled.section`
 export default Wrapper;
 ```
 
-wrappers/StatItem.js
+wrappers/StatItem.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.article`
@@ -4813,9 +4813,9 @@ export default Wrapper;
 
 #### Setup Public Folder
 
-server.js
+server.ts
 
-```js
+```ts
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -4832,9 +4832,9 @@ app.use(express.static(path.resolve(__dirname, './public')));
 - remove jobs,users from DB
 - add avatar property in the user model
 
-models/UserModel.js
+models/UserModel.ts
 
-```js
+```ts
 const UserSchema = new mongoose.Schema({
   avatar: String,
   avatarPublicId: String,
@@ -4843,9 +4843,9 @@ const UserSchema = new mongoose.Schema({
 
 #### Profile Page - Structure
 
-pages/Profile.jsx
+pages/Profile.tsx
 
-```js
+```ts
 import { FormRow } from '../components';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { useOutletContext } from 'react-router-dom';
@@ -4903,9 +4903,9 @@ export default Profile;
 
 #### Profile Page - Action
 
-- import/export action (App.jsx)
+- import/export action (App.tsx)
 
-```js
+```ts
 export const action = async ({ request }) => {
   const formData = await request.formData();
 
@@ -4931,12 +4931,12 @@ export const action = async ({ request }) => {
 npm i multer@1.4.5
 ```
 
-Multer is a popular middleware package for handling multipart/form-data in Node.js web applications. It is commonly used for handling file uploads. Multer simplifies the process of accepting and storing files submitted through HTTP requests by providing an easy-to-use API. It integrates seamlessly with Express.js and allows developers to define upload destinations, file size limits, and other configurations.
+Multer is a popular middleware package for handling multipart/form-data in Node.ts web applications. It is commonly used for handling file uploads. Multer simplifies the process of accepting and storing files submitted through HTTP requests by providing an easy-to-use API. It integrates seamlessly with Express.ts and allows developers to define upload destinations, file size limits, and other configurations.
 
-- create middleware/multerMiddleware.js
+- create middleware/multerMiddleware.ts
 - setup multer
 
-```js
+```ts
 import multer from 'multer';
 
 const storage = multer.diskStorage({
@@ -4955,10 +4955,10 @@ const upload = multer({ storage });
 export default upload;
 ```
 
-routes/userRouter.js
+routes/userRouter.ts
 
-```js
-import upload from '../middleware/multerMiddleware.js';
+```ts
+import upload from '../middleware/multerMiddleware.ts';
 
 router.patch(
   '/update-user',
@@ -5000,7 +5000,7 @@ npm i cloudinary@1.37.3
 
 server
 
-```js
+```ts
 import cloudinary from 'cloudinary';
 
 cloudinary.config({
@@ -5012,9 +5012,9 @@ cloudinary.config({
 
 #### Update User Controller
 
-controllers/userController.js
+controllers/userController.ts
 
-```js
+```ts
 import cloudinary from 'cloudinary';
 import { promises as fs } from 'fs';
 
@@ -5033,13 +5033,13 @@ export const updateUser = async (req, res) => {
   if (req.file && updatedUser.avatarPublicId) {
     await cloudinary.v2.uploader.destroy(updatedUser.avatarPublicId);
   }
-  res.status(StatusCodes.OK).json({ msg: 'update user' });
+  res.status(StatusCodes.OK).tson({ msg: 'update user' });
 };
 ```
 
 #### Logout Container
 
-```js
+```ts
 {
   user.avatar ? (
     <img src={user.avatar} alt='avatar' className='img' />
@@ -5056,7 +5056,7 @@ export const updateUser = async (req, res) => {
 - setup in Register,Login, AddJob, EditJob, Profile
 - make sure to add formBtn prop
 
-```js
+```ts
 import { useNavigation } from 'react-router-dom';
 const SubmitBtn = ({ formBtn }) => {
   const navigation = useNavigation();
@@ -5079,7 +5079,7 @@ export default SubmitBtn;
 - create test user
 - feel free to use one of the chatGPT options
 
-```json
+```tson
 {
   "name": "Zippy",
   "email": "test@test.com",
@@ -5115,7 +5115,7 @@ export default SubmitBtn;
 
 #### Test User - Login Page
 
-```js
+```ts
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -5151,10 +5151,10 @@ export default Login;
 
 authMiddleware
 
-```js
+```ts
 import {
   BadRequestError,
-} from '../errors/customErrors.js';
+} from '../errors/customErrors.ts';
 
 export const authenticateUser = (req, res, next) => {
   ...
@@ -5182,7 +5182,7 @@ export const checkForTestUser = (req, res, next) => {
 
 [Mockaroo ](https://www.mockaroo.com/)
 
-```json
+```tson
 {
   "company": "Cogidoo",
   "position": "Help Desk Technician",
@@ -5193,30 +5193,30 @@ export const checkForTestUser = (req, res, next) => {
 }
 ```
 
-- rename and save json in utils
+- rename and save tson in utils
 
 #### Populate DB
 
-- create populate.js
+- create populate.ts
 - setup for test user and admin
 
-```js
+```ts
 import { readFile } from 'fs/promises';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import Job from './models/JobModel.js';
-import User from './models/UserModel.js';
+import Job from './models/JobModel.ts';
+import User from './models/UserModel.ts';
 try {
   await mongoose.connect(process.env.MONGO_URL);
   // const user = await User.findOne({ email: 'john@gmail.com' });
   const user = await User.findOne({ email: 'test@test.com' });
 
-  const jsonJobs = JSON.parse(
-    await readFile(new URL('./utils/mockData.json', import.meta.url))
+  const tsonJobs = tsON.parse(
+    await readFile(new URL('./utils/mockData.tson', import.meta.url))
   );
-  const jobs = jsonJobs.map((job) => {
+  const jobs = tsonJobs.map((job) => {
     return { ...job, createdBy: user._id };
   });
   await Job.deleteMany({ createdBy: user._id });
@@ -5233,13 +5233,13 @@ try {
 
 - create controller
 - setup route and thunder client
-- install/setup dayjs on the server
+- install/setup dayts on the server
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 import mongoose from 'mongoose';
-import day from 'dayjs';
+import day from 'dayts';
 
 export const showStats = async (req, res) => {
   const defaultStats = {
@@ -5262,7 +5262,7 @@ export const showStats = async (req, res) => {
       count: 3,
     },
   ];
-  res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications });
+  res.status(StatusCodes.OK).tson({ defaultStats, monthlyApplications });
 };
 ```
 
@@ -5272,9 +5272,9 @@ export const showStats = async (req, res) => {
 
 The MongoDB aggregation pipeline is like a factory line for data. Data enters, it goes through different stages like cleaning, sorting, or grouping, and comes out at the end changed in some way. It's a way to process data inside MongoDB.
 
-jobController.js
+jobController.ts
 
-```js
+```ts
 export const showStats = async (req, res) => {
   let stats = await Job.aggregate([
     { $match: { createdBy: new mongoose.Types.ObjectId(req.user.userId) } },
@@ -5318,13 +5318,13 @@ export const showStats = async (req, res) => {
     })
     .reverse();
 
-  res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications });
+  res.status(StatusCodes.OK).tson({ defaultStats, monthlyApplications });
 };
 ```
 
 #### Commentary
 
-```js
+```ts
 let stats = await Job.aggregate([
   { $match: { createdBy: new mongoose.Types.ObjectId(req.user.userId) } },
   { $group: { _id: '$jobStatus', count: { $sum: 1 } } },
@@ -5337,7 +5337,7 @@ let stats = await Job.aggregate([ ... ]); This line says we're going to perform 
 
 { $group: { _id: '$jobStatus', count: { $sum: 1 } } } This is the second stage of the pipeline. It groups the remaining jobs by their status (the jobStatus field). For each group, it calculates the count of jobs by adding 1 for each job ({ $sum: 1 }), and stores this in a field called count.
 
-```js
+```ts
 let monthlyApplications = await Job.aggregate([
   { $match: { createdBy: new mongoose.Types.ObjectId(req.user.userId) } },
   {
@@ -5369,9 +5369,9 @@ So, monthlyApplications will be an array with up to 6 elements, each representin
 - StatsContainer and ChartsContainer (import/export)
 - AreaChart, BarChart (local)
 
-pages/Stats.jsx
+pages/Stats.tsx
 
-```js
+```ts
 import { ChartsContainer, StatsContainer } from '../components';
 import customFetch from '../utils/customFetch';
 import { useLoaderData } from 'react-router-dom';
@@ -5400,7 +5400,7 @@ export default Stats;
 
 #### Stats Container
 
-```js
+```ts
 import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from 'react-icons/fa';
 import Wrapper from '../assets/wrappers/StatsContainer';
 import StatItem from './StatItem';
@@ -5441,7 +5441,7 @@ export default StatsContainer;
 
 #### ChartsContainer
 
-```js
+```ts
 import { useState } from 'react';
 
 import BarChart from './BarChart';
@@ -5477,7 +5477,7 @@ npm i recharts@2.5.0
 
 #### Area Chart
 
-```js
+```ts
 import {
   ResponsiveContainer,
   AreaChart,
@@ -5507,7 +5507,7 @@ export default AreaChartComponent;
 
 #### Bar Chart
 
-```js
+```ts
 import {
   BarChart,
   Bar,
@@ -5537,9 +5537,9 @@ export default BarChartComponent;
 
 #### Charts CSS (optional)
 
-wrappers/ChartsContainer.js
+wrappers/ChartsContainer.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -5564,11 +5564,11 @@ export default Wrapper;
 
 #### Get All Jobs - Server
 
-jobController.js
+jobController.ts
 
 Query parameters, also known as query strings or URL parameters, are used to pass information to a web server through the URL of a webpage. They are typically appended to the end of a URL after a question mark (?) and separated by ampersands (&). Query parameters consist of a key-value pair, where the key represents the parameter name and the value represents the corresponding data being passed. They are commonly used in web applications to provide additional context or parameters for server-side processing or to filter and sort data.
 
-```js
+```ts
 export const getAllJobs = async (req, res) => {
   const { search, jobStatus, jobType, sort } = req.query;
 
@@ -5613,7 +5613,7 @@ export const getAllJobs = async (req, res) => {
 
   res
     .status(StatusCodes.OK)
-    .json({ totalJobs, numOfPages, currentPage: page, jobs });
+    .tson({ totalJobs, numOfPages, currentPage: page, jobs });
 };
 ```
 
@@ -5621,7 +5621,7 @@ export const getAllJobs = async (req, res) => {
 
 - setup log in AllJobs loader
 
-```js
+```ts
 import { FormRow, FormRowSelect, SubmitBtn } from '.';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { Form, useSubmit, Link } from 'react-router-dom';
@@ -5671,9 +5671,9 @@ export default SearchContainer;
 
 #### All Jobs Loader
 
-AllJobs.jsx
+AllJobs.tsx
 
-```js
+```ts
 import { toast } from 'react-toastify';
 import { JobsContainer, SearchContainer } from '../components';
 import customFetch from '../utils/customFetch';
@@ -5715,7 +5715,7 @@ export default AllJobs;
 export const useAllJobsContext = () => useContext(AllJobsContext);
 ```
 
-```js
+```ts
 const params = Object.fromEntries([
   ...new URL(request.url).searchParams.entries(),
 ]);
@@ -5739,9 +5739,9 @@ Putting it all together, the code retrieves the URL from the request.url propert
 - remove SubmitBtn
 - add onChange to FormRow, FormRowSelect and all inputs
 
-SearchContainer.js
+SearchContainer.ts
 
-```js
+```ts
 import { FormRow, FormRowSelect } from '.';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { Form, useSubmit, Link } from 'react-router-dom';
@@ -5808,11 +5808,11 @@ export default SearchContainer;
 
 #### Debounce
 
-[JS Nuggets - Debounce](https://youtu.be/tYx6pXdvt1s)
+[ts Nuggets - Debounce](https://youtu.be/tYx6pXdvt1s)
 
 In JavaScript, debounce is a way to limit how often a function gets called. It helps prevent rapid or repeated function executions by introducing a delay. This is useful for tasks like handling user input, where you want to wait for a pause before triggering an action to avoid unnecessary processing.
 
-```js
+```ts
 const debounce = (onChange) => {
   let timeout;
   return (e) => {
@@ -5837,9 +5837,9 @@ const debounce = (onChange) => {
 
 - create PageBtnContainer
 
-JobsContainer.jsx
+JobsContainer.tsx
 
-```js
+```ts
 import Job from './Job';
 import Wrapper from '../assets/wrappers/JobsContainer';
 import PageBtnContainer from './PageBtnContainer';
@@ -5876,7 +5876,7 @@ export default JobsContainer;
 
 #### Basic PageBtnContainer
 
-```js
+```ts
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from 'react-icons/hi';
 import Wrapper from '../assets/wrappers/PageBtnContainer';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
@@ -5940,7 +5940,7 @@ export default PageBtnContainer;
 
 #### Complex - PageBtnContainer
 
-```js
+```ts
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from 'react-icons/hi';
 import Wrapper from '../assets/wrappers/PageBtnContainer';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
@@ -6059,9 +6059,9 @@ export default PageBtnContainer;
 
 #### PageBtnContainer CSS (optional)
 
-wrappers/PageBtnContainer.js
+wrappers/PageBtnContainer.ts
 
-```js
+```ts
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -6137,9 +6137,9 @@ cd client && npm run build
   - from client/dist
   - to server(root)/public
 
-- in server.js point to index.html
+- in server.ts point to index.html
 
-```js
+```ts
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './public', 'index.html'));
 });
@@ -6157,17 +6157,17 @@ app.get('*', (req, res) => {
 - add script
 - change path
 
-package.json
+package.tson
 
-```js
+```ts
  "scripts": {
     "setup-production-app": "npm i && cd client && npm i && npm run build",
   },
 ```
 
-server.js
+server.ts
 
-```js
+```ts
 app.use(express.static(path.resolve(__dirname, './client/dist')));
 
 app.get('*', (req, res) => {
@@ -6178,7 +6178,7 @@ app.get('*', (req, res) => {
 #### Test Locally
 
 - remove client/dist and client/node_modules
-- remove node_modules and package-lock.json (optional)
+- remove node_modules and package-lock.tson (optional)
 - run "npm run setup-production-app", followed by "node server"
 
 #### Test in Production
@@ -6199,11 +6199,11 @@ npm run setup-production-app
 npm i datauri@4.1.0
 ```
 
-middleware/multerMiddleware.js
+middleware/multerMiddleware.ts
 
-```js
+```ts
 import multer from 'multer';
-import DataParser from 'datauri/parser.js';
+import DataParser from 'datauri/parser.ts';
 import path from 'path';
 
 const storage = multer.memoryStorage();
@@ -6219,10 +6219,10 @@ export const formatImage = (file) => {
 export default upload;
 ```
 
-controller/userController.js
+controller/userController.ts
 
-```js
-import { formatImage } from '../middleware/multerMiddleware.js';
+```ts
+import { formatImage } from '../middleware/multerMiddleware.ts';
 
 export const updateUser = async (req, res) => {
   const newUser = { ...req.body };
@@ -6238,7 +6238,7 @@ export const updateUser = async (req, res) => {
   if (req.file && updatedUser.avatarPublicId) {
     await cloudinary.v2.uploader.destroy(updatedUser.avatarPublicId);
   }
-  res.status(StatusCodes.OK).json({ msg: 'update user' });
+  res.status(StatusCodes.OK).tson({ msg: 'update user' });
 };
 ```
 
@@ -6247,9 +6247,9 @@ export const updateUser = async (req, res) => {
 - create loading component (import/export)
 - check for loading in DashboardLayout page
 
-components/Loading.jsx
+components/Loading.tsx
 
-```js
+```ts
 const Loading = () => {
   return <div className='loading'></div>;
 };
@@ -6257,9 +6257,9 @@ const Loading = () => {
 export default Loading;
 ```
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```js
+```ts
 import { useNavigation } from 'react-router-dom';
 import { Loading } from '../components';
 
@@ -6291,9 +6291,9 @@ React Query is a powerful library that simplifies data fetching, caching, and sy
 npm i @tanstack/react-query@4.29.5 @tanstack/react-query-devtools@4.29.6
 ```
 
-App.jsx
+App.tsx
 
-```js
+```ts
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
@@ -6319,7 +6319,7 @@ const App = () => {
 
 - create components/ErrorElement
 
-```js
+```ts
 import { useRouteError } from 'react-router-dom';
 
 const Error = () => {
@@ -6330,18 +6330,18 @@ const Error = () => {
 export default ErrorElement;
 ```
 
-Stats.jsx
+Stats.tsx
 
-```js
+```ts
 export const loader = async () => {
   const response = await customFetch.get('/jobs/stats');
   return response.data;
 };
 ```
 
-App.jsx
+App.tsx
 
-```js
+```ts
 {
   path: 'stats',
   element: <Stats />,
@@ -6350,7 +6350,7 @@ App.jsx
 },
 ```
 
-```js
+```ts
 {
   path: 'stats',
   element: <Stats />,
@@ -6363,9 +6363,9 @@ App.jsx
 
 - navigate to stats
 
-Stats.jsx
+Stats.tsx
 
-```js
+```ts
 import { ChartsContainer, StatsContainer } from '../components';
 import customFetch from '../utils/customFetch';
 import { useLoaderData } from 'react-router-dom';
@@ -6397,7 +6397,7 @@ const Stats = () => {
 export default Stats;
 ```
 
-```js
+```ts
 const data = useQuery({
   queryKey: ['stats'],
   queryFn: () => customFetch.get('/jobs/stats'),
@@ -6414,7 +6414,7 @@ customFetch.get('/jobs/stats'): This line is making an HTTP GET request to the /
 
 #### Get Stats with React Query
 
-```js
+```ts
 const statsQuery = {
   queryKey: ['stats'],
   queryFn: async () => {
@@ -6449,9 +6449,9 @@ export default Stats;
 
 #### React Query in Stats Loader
 
-App.jsx
+App.tsx
 
-```js
+```ts
 {
   path: 'stats',
   element: <Stats />,
@@ -6460,9 +6460,9 @@ App.jsx
 },
 ```
 
-Stats.jsx
+Stats.tsx
 
-```js
+```ts
 import { ChartsContainer, StatsContainer } from '../components';
 import customFetch from '../utils/customFetch';
 import { useQuery } from '@tanstack/react-query';
@@ -6498,9 +6498,9 @@ export default Stats;
 
 #### React Query for Current User
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```js
+```ts
 const userQuery = {
   queryKey: ['user'],
   queryFn: async () => {
@@ -6524,9 +6524,9 @@ const Dashboard = ({ prefersDarkMode, queryClient }) => {
 
 #### Invalidate Queries
 
-Login.jsx
+Login.tsx
 
-```js
+```ts
 export const action =
   (queryClient) =>
   async ({ request }) => {
@@ -6544,9 +6544,9 @@ export const action =
   };
 ```
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```js
+```ts
 const logoutUser = async () => {
   navigate('/');
   await customFetch.get('/auth/logout');
@@ -6555,9 +6555,9 @@ const logoutUser = async () => {
 };
 ```
 
-Profile.jsx
+Profile.tsx
 
-```js
+```ts
 export const action =
   (queryClient) =>
   async ({ request }) => {
@@ -6581,9 +6581,9 @@ export const action =
 
 #### All Jobs Query
 
-AllJobs.jsx
+AllJobs.tsx
 
-```js
+```ts
 import { toast } from 'react-toastify';
 import { JobsContainer, SearchContainer } from '../components';
 import customFetch from '../utils/customFetch';
@@ -6640,9 +6640,9 @@ export const useAllJobsContext = () => useContext(AllJobsContext);
 
 #### Invalidate Jobs
 
-AddJob.jsx
+AddJob.tsx
 
-```js
+```ts
 export const action =
   (queryClient) =>
   async ({ request }) => {
@@ -6660,9 +6660,9 @@ export const action =
   };
 ```
 
-EditJob.jsx
+EditJob.tsx
 
-```js
+```ts
 export const action =
   (queryClient) =>
   async ({ request, params }) => {
@@ -6680,9 +6680,9 @@ export const action =
   };
 ```
 
-DeleteJob.jsx
+DeleteJob.tsx
 
-```js
+```ts
 export const action =
   (queryClient) =>
   async ({ params }) => {
@@ -6699,7 +6699,7 @@ export const action =
 
 #### Edit Job Loader
 
-```js
+```ts
 import { FormRow, FormRowSelect, SubmitBtn } from '../components';
 import Wrapper from '../assets/wrappers/DashboardFormPage';
 import { useLoaderData, useParams } from 'react-router-dom';
@@ -6791,9 +6791,9 @@ export default EditJob;
 
 #### Axios Interceptors
 
-DashboardLayout.jsx
+DashboardLayout.tsx
 
-```js
+```ts
 const DashboardContext = createContext();
 
 const DashboardLayout = ({ isDarkThemeEnabled }) => {
@@ -6835,20 +6835,20 @@ npm install helmet express-mongo-sanitize express-rate-limit
 ```
 
 Package: helmet
-Description: helmet is a security package for Express.js applications that helps protect them by setting various HTTP headers to enhance security, prevent common web vulnerabilities, and improve overall application security posture.
+Description: helmet is a security package for Express.ts applications that helps protect them by setting various HTTP headers to enhance security, prevent common web vulnerabilities, and improve overall application security posture.
 Need: The package is needed to safeguard web applications from potential security threats, such as cross-site scripting (XSS) attacks, clickjacking, and other security exploits.
 
 Package: express-mongo-sanitize
-Description: express-mongo-sanitize is a middleware for Express.js that sanitizes user-supplied data coming from request parameters, body, and query strings to prevent potential NoSQL injection attacks on MongoDB databases.
+Description: express-mongo-sanitize is a middleware for Express.ts that sanitizes user-supplied data coming from request parameters, body, and query strings to prevent potential NoSQL injection attacks on MongoDB databases.
 Need: The package addresses the need to protect MongoDB databases from malicious attempts to manipulate data and helps ensure the integrity of data storage and retrieval.
 
 Package: express-rate-limit
-Description: express-rate-limit is an Express.js middleware that helps control and limit the rate of incoming requests from a specific IP address or a set of IP addresses to protect the server from abuse, brute-force attacks, and potential denial-of-service (DoS) attacks.
+Description: express-rate-limit is an Express.ts middleware that helps control and limit the rate of incoming requests from a specific IP address or a set of IP addresses to protect the server from abuse, brute-force attacks, and potential denial-of-service (DoS) attacks.
 Need: This package is necessary to manage and regulate the number of requests made to the server within a given time frame, preventing excessive usage and improving the overall stability and performance of the application.
 
-server.js
+server.ts
 
-```js
+```ts
 import helmet from 'helmet';
 import mongoSanitize from 'express-mongo-sanitize';
 
@@ -6856,9 +6856,9 @@ app.use(helmet());
 app.use(mongoSanitize());
 ```
 
-routes/authRouter.js
+routes/authRouter.ts
 
-```js
+```ts
 import rateLimiter from 'express-rate-limit';
 
 const apiLimiter = rateLimiter({
