@@ -7,3 +7,17 @@ export type StatItemBackgroundType = {
 // Hooks
 
 export type useRouteErrorType = any
+
+// Consants
+
+export type FormRowType = {
+    type: string,
+    name: string,
+    label: string
+}
+
+// Props
+
+export type FormRowPropsType = {
+    data: FormRowType
+}

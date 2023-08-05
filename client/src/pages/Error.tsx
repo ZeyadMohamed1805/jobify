@@ -1,6 +1,6 @@
 // Modules
 import Wrapper from "../assets/styled_components/ErrorPage";
-import NotFound from "../components/NotFound";
+import { NotFound } from "../components/index";
 import { Link, useRouteError } from "react-router-dom";
 import { useRouteErrorType } from "../utils/types";
 
