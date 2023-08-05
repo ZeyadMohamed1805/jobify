@@ -3,7 +3,7 @@ import Wrapper from "../assets/styled_components/RegisterAndLoginPage";
 import { FormRow } from "../components/index";
 import { Logo } from "../components";
 import { Link } from "react-router-dom";
-import { FormRowsConstants } from "../utils/constants";
+import { RegisterConstants } from "../utils/constants";
 
 const Register = () => {
     return (
@@ -14,7 +14,7 @@ const Register = () => {
                     Register
                 </h4>
                 {
-                    FormRowsConstants.map( ( constant, index ) => (
+                    RegisterConstants.map( ( constant, index ) => (
                         <FormRow key={ index } data={ constant } />
                     ) )
                 }
