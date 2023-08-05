@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { StatItemBackgroundType } from '../../utils/types';
 
 const Wrapper = styled.article`
   padding: 2rem;
@@ -29,7 +30,7 @@ const Wrapper = styled.article`
   .icon {
     width: 70px;
     height: 60px;
-    background: ${(props) => props.bcg};
+    background: ${(props: StatItemBackgroundType) => props.bcg};
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
