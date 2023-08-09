@@ -1,6 +1,7 @@
 // Modules
 import { createBrowserRouter } from "react-router-dom";
 import { AddJob, Admin, AllJobs, DeleteJob, EditJob, Error, Landing, Login, Profile, Register, Stats } from "../pages/index";
+import defaultTheme from "./theme";
 import { DashboardLayout, HomeLayout } from "../layouts/index";
 
 // Declare The Router Object ( Paths & Pages )
@@ -14,7 +15,7 @@ const router = createBrowserRouter( [
             { index: true, element: <Landing /> }, // Landing Route
             { path: "register", element: <Register /> }, // Register Route
             { path: "login", element: <Login /> }, // Login Route
-            { path: "dashboard", element: <DashboardLayout /> }, // Dashboard Route
+            { path: "dashboard", element: <DashboardLayout theme={ defaultTheme() } /> }, // Dashboard Route
         ] 
     },
 ] );
